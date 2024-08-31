@@ -1,0 +1,136 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+dialog {
+  z-index: 1000;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 30px;
+  background: rgba(255, 197, 197, 0.63);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.4px);
+  -webkit-backdrop-filter: blur(16.4px);
+  border: 1px solid rgba(255, 197, 197, 0.29);
+  position: fixed;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+}
+aside {
+  width: 30vw;
+}
+
+form {
+  width: 70vw;
+  max-width: 400px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-around;
+}
+
+fieldset {
+  border-radius: 20px;
+}
+
+.simulation {
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+  height: 70%;
+  width: 70%;
+  top: 0;
+  left: 0;
+  background-color: rgb(242, 239, 236);
+
+  border-radius: 20px;
+}
+
+.intersection {
+  position: absolute;
+  z-index: 3;
+  height: 56%;
+  width: 56%;
+  top: 14%;
+  left: 14%;
+  background-color: rgb(208, 239, 243);
+
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.foreground {
+  position: absolute;
+  z-index: 2;
+  height: 80%;
+  width: 80%;
+  bottom: 0;
+  right: 0;
+
+  border: 9px solid rgba(102, 234, 255, 0.2);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+
+  border-radius: 20px;
+}
+
+.foreground::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgb(205, 205, 205) 0%,
+    rgb(255, 255, 255) 20%,
+    rgb(255, 255, 255) 50%,
+    rgba(102, 234, 255, 0.2) 50%,
+    rgba(102, 234, 255, 0.2) 100%
+  );
+  background-size: 3% 100%;
+  transform: rotate(45deg);
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+body {
+  background-color: white;
+}
+
+th {
+  background-color: white;
+}
+
+tbody tr:first-child td:first-child {
+  border-top-left-radius: 20px;
+  overflow: hidden;
+}
+tbody tr:first-child td:last-child {
+  border-top-right-radius: 20px;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
