@@ -20,6 +20,7 @@ main {
   display: flex;
   flex-wrap: nowrap;
 }
+
 aside {
   width: 30vw;
 }
@@ -133,4 +134,9 @@ tbody tr:last-child td:first-child {
 }
 tbody tr:last-child td:last-child {
   border-bottom-right-radius: 20px;
+}
+
+h1,
+h2 {
+  padding-left: 2vw;
 }
